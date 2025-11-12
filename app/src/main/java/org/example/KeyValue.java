@@ -13,10 +13,12 @@ public class KeyValue implements Comparable<KeyValue>{
     public String getValue() {return value;}
     public void setValue(String value){this.value = value;} //the necesity of this
 
+    @Override
     public int compareTo(KeyValue other){
         return this.key.compareTo(other.key);
     }
 
+    @Override
     public String toString() {
         return "(" + key + "," + value + ")";
     }

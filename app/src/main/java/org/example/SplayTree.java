@@ -1,5 +1,5 @@
 package org.example;
 
-public class SplayTree {
+public class SplayTree<T extends Comparable<T>> {
     
 }
