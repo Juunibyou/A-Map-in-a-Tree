@@ -1,5 +1,7 @@
-class Main {
-  public static void main(String[] args) {
+package org.example;
+
+public class App {
+    public static void main(String[] args) {
     TreeMap map = new TreeMap();
  
     // Insert a number of key-value pairs into the tree map
@@ -17,6 +19,7 @@ class Main {
     System.out.println(map.get("keyDoesNotExist"));
  
     // Deletes the key-value pair from the tree map
-    System.out.println(map.delete("keyOne"));
+    map.delete("keyOne");
+    System.out.println(map.get("keyOne"));
   }
 }
