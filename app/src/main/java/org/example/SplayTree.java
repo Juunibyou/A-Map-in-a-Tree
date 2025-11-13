@@ -109,7 +109,7 @@ public class SplayTree {
         if (root == null) {return;}
 
         KeyValue keyvalue = new KeyValue(key, "");
-        root = splay(root.keyvalue);
+        root = splay(root, keyvalue);
 
         if (!root.data.getKey().equals(key)) {return;}
 
