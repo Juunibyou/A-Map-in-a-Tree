@@ -10,7 +10,9 @@ public class KeyValue implements Comparable<KeyValue>{
     }
 
     public String getKey() {return key;}
+
     public String getValue() {return value;}
+    
     public void setValue(String value){this.value = value;} //the necesity of this
 
     @Override
