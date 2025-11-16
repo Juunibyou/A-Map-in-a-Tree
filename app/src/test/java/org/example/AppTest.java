@@ -5,7 +5,45 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 
 class AppTest {
+
+    private TreeMap map;
+
+    @BeforeEach
+    void setUp() {
+        map = new TreeMap();
+    }
+
+    @Test
+    void testInsertAndGet() {
+        map.insert("keyOne", "valueOne");
+        map.insert("keyTwo", "valueTwo");
+        map.insert("keyThree", "valueThree");
+
+        assertEquals("valueOne", map.get("keyOne"));
+        assertEquals("valueTwo", map.get("keyTwo"));
+        assertEquals("valueThree", map.get("keyThree"));
+    }
+
+    @Test
+    void testOverwriteValue() {
+        map.insert("k", "first");
+        map.insert("k", "second");
+
+        assertEquals("second", map.get("k"));
+    }
+
+    @Test
+    void testDeleteExistingKey() {
+        map.insert("x", "100");
+        map.insert("y", "200");
+
+        map.delete("x");
+
+        assertEquals("", map.get("x"));
+        assertEquals("200", map.get("y"));
+    }
 
 }
